@@ -1,0 +1,17 @@
+.card{
+  background-color: #485563;
+  color: silver;
+  font-weight: bold;
+  font-size: 18px;
+}
+.card-header{
+  font-size: 23px;
+}
+.card-body ul{
+  border:none;
+  background: none;
+}
+.card-body ul li{
+  border: none;
+  background: none;
+}

@@ -1,0 +1,25 @@
+<div class="card my-3">
+  <div class="card-header">
+    {{event.name}}
+  </div>
+  <div class="card-body" (click)="OnClick()">
+    <ul class="list-group">
+      <li class="list-group-item" [ngSwitch]="event?.time">
+        Date: {{event.date}}  {{event.time}}
+        <span *ngSwitchCase="'8:00 am'" class="mx-2">(Early Start)</span>
+        <span *ngSwitchCase="'10:00 am'" class="mx-2">(Late Start)</span>
+        <span *ngSwitchDefault class="mx-2">(Normal Start)</span>
+      </li>
+      <li class="list-group-item" [hidden] = "!event?.location">
+        Location: {{event?.location?.city}}
+      </li>
+      <li class="list-group-item">
+        Price: {{event.price | currency: 'USD':'symbol':'1.2-2'}}
+      </li>
+    </ul>
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-danger w-25 float-right" (click)="OnDestroy($event)">Destroy</button>
+  </div>
+
+</div>

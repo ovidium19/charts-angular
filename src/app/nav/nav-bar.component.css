@@ -1,0 +1,21 @@
+@media only screen and (max-width: 600px){
+  form{
+    display: none;
+  }
+}
+nav{
+  margin-bottom: 10px;
+  background-color: #555555;
+  color: #f89406;
+}
+.nav-link{
+  text-decoration: none;
+  color: #f89406;
+}
+.navbar-brand{
+  color: #2f96b4;
+  font-weight: bold;
+}
+.nav-link:hover{
+  color: cornsilk;
+}
